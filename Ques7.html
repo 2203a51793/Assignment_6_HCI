@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Palindrome Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        input[type="text"] {
+            width: 30%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px 0;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            font-weight: bold;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Palindrome Checker</h1>
+    <label for="numberInput">Enter a Number:</label>
+    <input type="text" id="numberInput">
+    <button onclick="checkPalindrome()">Check</button>
+    <p id="result"></p>
+
+    <script>
+        function checkPalindrome() {
+            var inputNumber = document.getElementById("numberInput").value;
+
+            var cleanedInput = inputNumber.replace(/\s/g, "").toLowerCase();
+
+            var reversedInput = cleanedInput.split("").reverse().join("");
+
+            if (cleanedInput === reversedInput) {
+                document.getElementById("result").innerHTML = "It's a palindrome!";
+            } else {
+                document.getElementById("result").innerHTML = "It's not a palindrome.";
+            }
+        }
+    </script>
+</body>
+</html>

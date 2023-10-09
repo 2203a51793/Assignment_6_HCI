@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Array Elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Align list items in the center horizontally */
+        }
+
+        li {
+            width: 50%;
+            background-color: #fff;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Array Elements:</h1>
+    <ul id="arrayList"></ul>
+
+    <script>
+        // Sample array
+        var myArray = ["Data Structures", "Human Computer Interface", "Probability & Statistics", "Discrete Mathematics", "Microprocessor & Computer Architecture"];
+
+        // Get the ul element where we want to display the array elements
+        var arrayList = document.getElementById("arrayList");
+
+        // Loop through the array and create list items for each element
+        for (var i = 0; i < myArray.length; i++) {
+            var listItem = document.createElement("li");
+            listItem.textContent = myArray[i];
+            arrayList.appendChild(listItem);
+        }
+    </script>
+</body>
+</html>

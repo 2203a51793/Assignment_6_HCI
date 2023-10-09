@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Print Numbers 1 to 10</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            font-size: 24px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Numbers from 1 to 10:</h1>
+    <ul id="numberList"></ul>
+
+    <script>
+        // Get the <ul> element where we will display the numbers
+        var numberList = document.getElementById("numberList");
+
+        // Loop from 1 to 10 and add each number to the list
+        for (var i = 1; i <= 10; i++) {
+            var listItem = document.createElement("li");
+            listItem.textContent = i;
+            numberList.appendChild(listItem);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Positive or Negative Number Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        input[type="number"] {
+            width: 30%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px 0;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            font-weight: bold;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Positive or Negative Number Checker</h1>
+    
+    <label for="numberInput">Enter a number: </label>
+    <input type="number" id="numberInput">
+    <button onclick="checkNumber()">Check</button>
+    
+    <p id="result"></p>
+
+    <script>
+        function checkNumber() {
+            var number = parseFloat(document.getElementById("numberInput").value);
+
+            if (isNaN(number)) {
+                document.getElementById("result").textContent = "Please enter a valid number.";
+            } else if (number > 0) {
+                document.getElementById("result").textContent = "The number is positive.";
+            } else if (number < 0) {
+                document.getElementById("result").textContent = "The number is negative.";
+            } else {
+                document.getElementById("result").textContent = "The number is zero.";
+            }
+        }
+    </script>
+</body>
+</html>

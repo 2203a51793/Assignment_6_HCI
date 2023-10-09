@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fibonacci Series</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        input[type="number"] {
+            width: 30%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px 0;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            font-weight: bold;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        #fibonacci {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fibonacci Series</h1>
+    
+    <label for="number">Enter the number of Fibonacci terms:</label>
+    <input type="number" id="number">
+    <button onclick="generateFibonacci()">Generate Fibonacci</button>
+    
+    <p id="result"></p>
+    <div id="fibonacci"></div>
+
+    <script>
+        function generateFibonacci() {
+            var numInput = document.getElementById("number");
+            var num = parseInt(numInput.value);
+
+            if (!isNaN(num) && num >= 1) {
+                var fibonacciSeries = [0, 1];
+
+                for (var i = 2; i < num; i++) {
+                    var nextNum = fibonacciSeries[i - 1] + fibonacciSeries[i - 2];
+                    fibonacciSeries.push(nextNum);
+                }
+
+                var result = "Fibonacci Series: " + fibonacciSeries.join(", ");
+                document.getElementById("result").textContent = result;
+                
+            } else {
+                document.getElementById("result").textContent = "Please enter a valid number greater than or equal to 1.";
+                document.getElementById("fibonacci").textContent = "";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        h1 {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+        }
+
+        .calculator {
+            width: 90%;
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        input[type="text"] {
+            width: 95%;
+            height: 40px;
+            font-size: 24px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: 20%;
+            max-width: 150px;
+            height: 70px;
+            font-size: 24px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+            background-color: #f0f0f0;
+        }
+
+        button:hover {
+            background-color: #ddd;
+        }
+
+      
+        button.clear-all {
+            width: 90%;
+            background-color: red;
+            color: white;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        button.clear-all:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+    <div class="calculator">
+        <input type="text" id="result" readonly>
+        <br>
+        <button onclick="appendToResult('1')">1</button>
+        <button onclick="appendToResult('2')">2</button>
+        <button onclick="appendToResult('3')">3</button>
+        <button onclick="appendToResult('+')">+</button>
+        <br>
+        <button onclick="appendToResult('4')">4</button>
+        <button onclick="appendToResult('5')">5</button>
+        <button onclick="appendToResult('6')">6</button>
+        <button onclick="appendToResult('-')">-</button>
+        <br>
+        <button onclick="appendToResult('7')">7</button>
+        <button onclick="appendToResult('8')">8</button>
+        <button onclick="appendToResult('9')">9</button>
+        <button onclick="appendToResult('*')">*</button>
+        <br>
+        <button onclick="appendToResult('0')">0</button>
+        <button onclick="appendToResult('.')">.</button>
+        <button onclick="appendToResult('/')">/</button>
+        <button onclick="calculateResult()">=</button>
+        <br>
+        <!-- Clear All button -->
+        <button onclick="clearAll()" class="clear-all">Clear All</button>
+        
+    </div>
+
+    <script>
+        function appendToResult(value) {
+            document.getElementById("result").value += value;
+        }
+
+        function clearResult() {
+            document.getElementById("result").value = "";
+        }
+
+        function clearAll() {
+            document.getElementById("result").value = "";
+        }
+
+        function calculateResult() {
+            const result = document.getElementById("result").value;
+
+            try {
+                const evalResult = eval(result);
+                if (isNaN(evalResult) || !isFinite(evalResult)) {
+                    throw new Error("Invalid input");
+                }
+                document.getElementById("result").value = evalResult;
+            } catch (error) {
+                document.getElementById("result").value = "Error";
+            }
+        }
+    </script>
+</body>
+</html>

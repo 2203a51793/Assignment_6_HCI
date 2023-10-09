@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Style for error messages */
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form Validation</h1>
+    <form name="myForm" onsubmit="return validateForm()" action="#" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <br>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <br>
+        
+        <label for="rePassword">Re-enter Password:</label>
+        <input type="password" id="rePassword" name="rePassword">
+        <br>
+        
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="text" id="phoneNumber" name="phoneNumber">
+        <br>
+        
+        <label for="pinCode">Pin Code:</label>
+        <input type="text" id="pinCode" name="pinCode">
+        <br>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function validateForm() {
+            var username = document.forms["myForm"]["username"].value;
+            var password = document.forms["myForm"]["password"].value;
+            var rePassword = document.forms["myForm"]["rePassword"].value;
+            var phoneNumber = document.forms["myForm"]["phoneNumber"].value;
+            var pinCode = document.forms["myForm"]["pinCode"].value;
+
+            // Check if the username is at least 8 characters
+            if (username.length < 8) {
+                alert("Username should be at least 8 characters.");
+                return false;
+            }
+
+            // Check if the password is at least 8 characters
+            if (password.length < 8) {
+                alert("Password should be at least 8 characters.");
+                return false;
+            }
+
+            // Check if the re-entered password matches the original password
+            if (password !== rePassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+
+            // Check if the phone number is at most 10 digits
+            if (phoneNumber.length > 10) {
+                alert("Phone number should be at most 10 digits.");
+                return false;
+            }
+
+            // Check if the pin code is at most 6 digits
+            if (pinCode.length > 6) {
+                alert("Pin code should be at most 6 digits.");
+                return false;
+            }
+
+            // If all validations pass, the form is valid
+            return true;
+        }
+    </script>
+</body>
+</html>
