@@ -1,29 +1,85 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Display Array Elements in Reverse</title>
-</head>
-<body>
-    <div id="arrayDisplay"></div>
-
-    <script>
-        // Sample array
-        var myArray = ["Hello", "world"];
-
-        // Function to display array elements in reverse order in the HTML div
-        function displayArrayElementsInReverse() {
-            var arrayDiv = document.getElementById("arrayDisplay");
-            arrayDiv.innerHTML = ""; // Clear any previous content
-
-            for (var i = myArray.length - 1; i >= 0; i--) {
-                var element = document.createElement("p");
-                element.textContent = "word " + (myArray.length - i) + ": " + myArray[i];
-                arrayDiv.appendChild(element);
-            }
+    <title>Reverse Array Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
         }
 
-        // Call the function to initially display the array elements in reverse order
-        displayArrayElementsInReverse();
+        h1 {
+            color: #333;
+            margin-top: 30px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 90%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #output {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Display Array Elements in Reverse Order</h1>
+
+    <div class="container">
+        <label for="inputArray">Enter Array (comma-separated):</label>
+        <input type="text" id="inputArray">
+        <button onclick="displayReverseArray()">Display Reverse</button>
+        
+        <div id="output">
+            <!-- Output will be displayed here -->
+        </div>
+    </div>
+
+    <script>
+        function displayReverseArray() {
+            const inputArray = document.getElementById('inputArray').value.split(',');
+            const cleanedArray = inputArray.map(item => item.trim());
+            const reversedArray = cleanedArray.reverse();
+            document.getElementById('output').textContent = reversedArray.join(', ');
+        }
     </script>
 </body>
 </html>
