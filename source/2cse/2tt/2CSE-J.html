@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2 CSE-J timetable</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Arial, sans-serif;
+        user-select: none;
+        font-weight: bold;
+      }
+      th {
+        color: red;
+      }
+      table {
+        width: 80%;
+        height: 80%;
+        border-collapse: collapse;
+        border: 1px solid black;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+      }
+      th,
+      #day {
+        background-color: #f2f2f2;
+        color: red;
+      }
+      #all {
+        color: red;
+      }
+      @media screen and (max-width: 767px) {
+        table {
+          font-size: 4pt;
+          height: 180px;
+          width: 250px;
+        }
+        .time-table span {
+          font-size: 8px;
+        }
+        th,
+        td {
+          padding: 2px;
+        }
+        h1,
+        h3 {
+          font-size: 8pt;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="time-table">
+      <span style="padding-left: 100px">SECTION: &nbsp; II B.TECH CSE J</span>
+      <table align="center">
+        <tr>
+          <th style="color: red">DAY</th>
+          <th style="color: red">8.30-9.30</th>
+          <th style="color: red">9.30-10.30</th>
+          <th style="color: red">10.30-11.30</th>
+          <th style="color: red">11.30-12.30</th>
+          <th style="color: red">12.30-1.30</th>
+          <th style="color: red">1.30-2.30</th>
+          <th style="color: red">2.30-3.30</th>
+          <th style="color: red">3.30-4.30</th>
+
+          <th style="color: red">4.30-5.30</th>
+        </tr>
+        <tr>
+          <td style="color: red">MON</td>
+          <td colspan="2">DS LAB<br />(SRIX-I)</td>
+          <td>MPCA <br />(1305)</td>
+          <td>DS<br />(1305)</td>
+          <td rowspan="5">LUNCH</td>
+          <td colspan="2">MPCA LAB<br />(JKC LAB)</td>
+          <td>DMS <br />(1305)</td>
+          <td>HCI <br />(1305)</td>
+        </tr>
+        <tr>
+          <td style="color: red; background-color: #f2f2f2">TUE</td>
+          <td></td>
+          <td>
+            DMS<br />
+            (1305)
+          </td>
+          <td colspan="2">HCI LAB<br />(DE IT LAB)</td>
+          <td>DS <br />(1305)</td>
+          <td></td>
+          <td colspan="2">P&S LAB <br />(1305)</td>
+        </tr>
+        <tr>
+          <td style="color: red">WED</td>
+          <td>DMS <br />(1305)</td>
+          <td>MPCA <br />(1305)</td>
+          <td colspan="2">DS LAB<br />(SRIX-I)</td>
+          <td colspan="2">OE</td>
+          <td colspan="2">NCC</td>
+        </tr>
+        <tr>
+          <td style="color: red; background-color: #f2f2f2">THU</td>
+          <td>
+            MPCA<br />
+            (1305)
+          </td>
+          <td>DS <br />(1305)</td>
+          <td>P&S <br />(1305)</td>
+          <td>
+            EIPR<br />
+            (SEM HALL)
+          </td>
+          <td>DMS <br />(1305)</td>
+          <td>
+            HCI<br />
+            (1305)
+          </td>
+          <td colspan="2">DS LAB<br />(JKC)</td>
+        </tr>
+        <tr>
+          <td style="color: red">FRI</td>
+          <td>
+            P&S<br />
+            (1305)
+          </td>
+          <td></td>
+          <td>HCI <br />(1305)</td>
+          <td>
+            DS<br />
+            (1305)
+          </td>
+          <td>
+            P&S<br />
+            (1305)
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+      <span style="padding-left: 100px">CLASS COORDINATOR: R ASHOK</span>
+      <br />
+      <br />
+      <div id="faculty-info">
+        <table align="center">
+          <tr>
+            <th style="color: red">COURSE NAME</th>
+            <th></th>
+            <th style="color: red">FACULTY NAME</th>
+          </tr>
+          <tr>
+            <td>DISCRETE MATHEMATICAL STRUCTURE</td>
+            <td>DMS</td>
+            <td>Dr P Chakradhar</td>
+          </tr>
+          <tr>
+            <td>PROBABILTY & STATISTICS</td>
+            <td>P&S</td>
+            <td>DR T Kiran Kumar</td>
+          </tr>
+          <tr>
+            <td>PROBABILTY & STATISTICS LAB</td>
+            <td>P&S</td>
+            <td>DR T Kiran Kumar</td>
+          </tr>
+          <tr>
+            <td>DATA STRUCTURES</td>
+            <td>DS</td>
+            <td>Dr A Siva Krishna Reddy</td>
+          </tr>
+          <tr>
+            <td>DATA STRUCTURES LAB</td>
+            <td>DS LAB<t/td></td>
+            <td>Dr A Siva Krishna Reddy</td>
+          </tr>
+          <tr>
+            <td>MICROPROCESSOR AND COMPUTER ARCHITECTURE</td>
+            <td>MPCA</td>
+            <td>R Ashok</td>
+          </tr>
+          <tr>
+            <td>MICROPROCESSOR AND COMPUTER ARCHITECTURE LAB</td>
+            <td>MPCA</td>
+            <td>R Ashok</td>
+          </tr>
+          <tr>
+            <td>HUMAN COMPUTER INTERACTION</td>
+            <td>HCI</td>
+            <td>D VeeraReddy</td>
+          </tr>
+          <tr>
+            <td>HUMAN COMPUTER INTERACTION LAB</td>
+            <td>HCI</td>
+            <td>D VeeraReddy</td>
+          </tr>
+          <tr>
+            <td>ETHICS AND INTELLECTUAL PROPERTY RIGHTS</td>
+            <td>EIPR</td>
+            <td>Mr D Rameshbabu</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

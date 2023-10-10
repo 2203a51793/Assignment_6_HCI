@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Arial, sans-serif;
+        user-select: none;
+        font-weight: bold;
+      }
+      th {
+        color: red;
+      }
+      table {
+        width: 80%;
+        height: 80%;
+        border-collapse: collapse;
+        border: 1px solid black;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+      }
+      th,
+      #day {
+        background-color: #f2f2f2;
+        color: red;
+      }
+      #all {
+        color: red;
+      }
+      @media screen and (max-width: 767px) {
+        table {
+          font-size: 4pt;
+          height: 180px;
+          width: 260px;
+        }
+        .time-table span {
+          font-size: 8px;
+        }
+        th,
+        td {
+          padding: 2px;
+        }
+        h1,
+        h3 {
+          font-size: 8pt;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <br />
+    <div class="time-table">
+      <span style="padding-left: 100px"
+        >SECTION: &nbsp;II B.TECH CSE AIML C</span
+      >
+      <br />
+      <table align="center">
+        <tr>
+          <th>DAY</th>
+          <th>8:30-9:30</th>
+          <th>9:30-10:30</th>
+          <th>10:30-11:30</th>
+          <th>11:30-12:30</th>
+          <th>12:30-1:30</th>
+          <th>1:30-2:30</th>
+          <th>2:30-3:30</th>
+          <th>3:30-4:30</th>
+          <th>4:30-5:30</th>
+        </tr>
+        <tr>
+          <td style="color: red">MON</td>
+          <td>
+            MPCA<br />
+            (1306)
+          </td>
+          <td>DMS<br />(1306)</td>
+          <td colspan="2">
+            P&S LAB<br />
+            (1302)
+          </td>
+          <td></td>
+          <td>
+            DS<br />
+            (1305)
+          </td>
+          <td>
+            P&S<br />
+            (1305)
+          </td>
+          <td colspan="2">DS LAB <br />(SRIX-III)</td>
+        </tr>
+        <tr>
+          <td style="color: red">TUE</td>
+          <td>
+            STATML<br />
+            (1306)
+          </td>
+          <td>MPCA <br />(1306)</td>
+          <td colspan="2">
+            DS LAB<br />
+            (SRIX-III)
+          </td>
+          <td></td>
+          <td>
+            DMS<br />
+            (1206)
+          </td>
+          <td>
+            P&S<br />
+            (1206)
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="color: red">WED</td>
+          <td>ES <br />(1214)</td>
+          <td>
+            STATML<br />
+            (1214)
+          </td>
+          <td colspan="2">
+            DS LAB<br />
+            (SRIX-III)
+          </td>
+          <td></td>
+          <td colspan="2">OE ()</td>
+          <td colspan="2">NCC()</td>
+        </tr>
+        <tr>
+          <td style="color: red">THU</td>
+          <td>DS <br />(1307)</td>
+          <td>DS <br />(1307)</td>
+          <td>
+            DMS<br />
+            (1312)
+          </td>
+          <td>
+            STATML<br />
+            (1312)
+          </td>
+          <td></td>
+          <td colspan="2">
+            STATML LAB<br />
+            (SRIX-III)
+          </td>
+          <td>MPCA <br />(1314)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="color: red">FRI</td>
+          <td>DMS <br />(1314)</td>
+          <td>DS <br />(1314)</td>
+          <td colspan="2">MPCA LAB <br />(SRIX-III)</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>P&S <br />(1305)</td>
+          <td></td>
+        </tr>
+      </table>
+      <span style="padding-left: 100px">Class Coordinator: S Jagadish</span>
+    </div>
+    <br />
+    <div id="faculty-info">
+      <table align="center">
+        <tr>
+          <th>COURSE NAME</th>
+          <th></th>
+          <th>FACULTY NAME</th>
+        </tr>
+        <tr>
+          <td>Discrete Mathematical StructureE</td>
+          <td>DMS</td>
+          <td>Dr R Vijayaprakash</td>
+        </tr>
+        <tr>
+          <td>Probability & Statistics</td>
+          <td>P&S</td>
+          <td>Dr G Ravi Kiran</td>
+        </tr>
+        <tr>
+          <td>Probability & Statistics Lab</td>
+          <td>P&S</td>
+          <td>Dr G Ravi Kiran</td>
+        </tr>
+        <tr>
+          <td>Data Structures</td>
+          <td>DS</td>
+          <td>S Jagadish</td>
+        </tr>
+        <tr>
+          <td>Data Structures Lab</td>
+          <td>DS LAB</td>
+          <td>S Jagadish</td>
+        </tr>
+        <tr>
+          <td>Microprocessor and Computer Architecture</td>
+          <td>MPCA</td>
+          <td>R Ashok</td>
+        </tr>
+        <tr>
+          <td>Microprocessor and Computer Architecture Lab</td>
+          <td>MPCA LAB</td>
+          <td>R Ashok</td>
+        </tr>
+        <tr>
+          <td>Stat ML</td>
+          <td>Stat ML</td>
+          <td>D Ramesh</td>
+        </tr>
+        <tr>
+          <td>Stat ML Lab</td>
+          <td>Stat ML Lab</td>
+          <td>D Ramesh</td>
+        </tr>
+        <tr>
+          <td>Entrepreneurship and startup</td>
+          <td>ES</td>
+          <td>Dr N suman</td>
+        </tr>
+      </table>
+      <br /><br />
+    </div>
+  </body>
+</html>

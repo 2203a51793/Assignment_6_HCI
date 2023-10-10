@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2nd CSE-AIML-D</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      user-select: none;
+      font-weight: bold;
+    }
+    th {
+      color: red;
+    }
+    table {
+      width: 80%;
+      height: 80%;
+      border-collapse: collapse;
+      border: 1px solid black;
+    }
+    th,
+    td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: center;
+    }
+    th,
+    #day {
+      background-color: #f2f2f2;
+      color: red;
+    }
+    #all {
+      color: red;
+    }
+    @media screen and (max-width: 767px) {
+      table {
+        font-size: 4pt;
+        height: 180px;
+        width: 260px;
+      }
+      .time-table span {
+        font-size: 8px;
+      }
+      th,
+      td {
+        padding: 2px;
+      }
+      h1,
+      h3 {
+        font-size: 8pt;
+      }
+    }
+  </style>
+  <body>
+    <br />
+    <div class="time-table">
+      <span style="padding-left: 100px">SECTION : II B.TECH CSE AIML D</span>
+
+      <table border="1" align="center">
+        <tr>
+          <th>DAY</th>
+          <th>8:30-9:30</th>
+          <th>9:30-10:30</th>
+          <th>10:30-11:30</th>
+          <th>11:30-12:30</th>
+          <th>12:30-1:30</th>
+          <th>1:30-2:30</th>
+          <th>2:30-3:30</th>
+          <th>3:30-4:30</th>
+          <th>4:30-5:30</th>
+        </tr>
+        <tr>
+          <th class="a" style="background-color: #f2f2f2">MON</th>
+          <td>MPCA <br />(1305)</td>
+          <td>P&S <br />(1305)</td>
+          <td></td>
+          <td>DS <br />(1210)</td>
+          <td rowspan="5">LUNCH</td>
+          <td>
+            STATML<br />
+            (1203)
+          </td>
+          <td>DMS <br />(1203)</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th class="a">TUE</th>
+          <td>
+            DMS<br />
+            (1203)
+          </td>
+          <td>P&S <br />(1203)</td>
+          <td>
+            DS<br />
+            (1305)
+          </td>
+          <td>
+            MPCA<br />
+            (1305)
+          </td>
+          <td colspan="2">
+            DS LAB<br />
+            (SRIX-I)
+          </td>
+          <td>
+            STATML<br />
+            (1307)
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <th class="a" style="background-color: #f2f2f2">WED</th>
+          <td>DS <br />(1307)</td>
+          <td>DMS <br />(1307)</td>
+          <td colspan="2">
+            MPCA LAB<br />
+            (SRIX-II)
+          </td>
+          <td colspan="2">OE ()</td>
+          <td colspan="2">NCC()</td>
+        </tr>
+        <tr>
+          <th class="a">THU</th>
+          <td>STATML <br />(1206)</td>
+          <td>DMS <br />(1206)</td>
+          <td colspan="2">
+            DS LAB<br />
+            (SRIX-I)
+          </td>
+          <td>
+            MPCA<br />
+            (1206)
+          </td>
+          <td>DS <br />(1206)</td>
+          <td colspan="2">
+            P&S LAB<br />
+            (1206)
+          </td>
+        </tr>
+        <tr>
+          <th class="a" style="background-color: #f2f2f2">FRI</th>
+          <td colspan="2">STATML LAB <br />(SRIX-I)</td>
+          <td></td>
+          <td>P&S <br />(1203)</td>
+          <td colspan="2">DS LAB <br />(JKC LAB)</td>
+          <td>ES <br />(1202)</td>
+          <td></td>
+        </tr>
+      </table>
+
+      <span style="padding-left: 100px">Class Coordinator: R Narasimbul</span>
+      <br />
+      <br />
+      <table border="1" align="center">
+        <tr>
+          <td
+            id="all"
+            style="text-align: center; background-color: #f2f2f2; color: red"
+          >
+            COURSE NAME
+          </td>
+          <td
+            id="all"
+            style="text-align: center; background-color: #f2f2f2; color: red"
+          ></td>
+          <td
+            id="all"
+            style="text-align: center; background-color: #f2f2f2; color: red"
+          >
+            FACULTY NAME
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: center">Discrete Mathematical Structure</td>
+          <td style="text-align: center">DMS</td>
+          <td style="text-align: center">Mr K Sudheer Kumar</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">Probability & Statistics</td>
+          <td style="text-align: center; width: 10%">P&S</td>
+          <td style="text-align: center">Dr T Kiran Kumar</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">Probability & Statistics Lab</td>
+          <td style="text-align: center; width: 10%">P&S LAB</td>
+          <td style="text-align: center">Dr T Kiran Kumar</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">Data Structures</td>
+          <td style="text-align: center; width: 10%">DS</td>
+          <td style="text-align: center">B Narasimhulu</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">Data Structures Lab</td>
+          <td style="text-align: center; width: 10%">DS LAB</td>
+          <td style="text-align: center">B Narasimhulu</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">
+            Microprocessor and Computer Architecture
+          </td>
+          <td style="text-align: center; width: 10%">MPCA</td>
+          <td style="text-align: center">Paiza Iram</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">
+            Microprocessor and Computer Architecture Lab
+          </td>
+          <td style="text-align: center; width: 10%">MPCA LAB</td>
+          <td style="text-align: center">Paiza Iram</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">Stat ML</td>
+          <td style="text-align: center; width: 10%">Stat ML</td>
+          <td style="text-align: center">Dr ELN Kiran</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">Stat ML Lab</td>
+          <td style="text-align: center; width: 10%">Stat ML LAB</td>
+          <td style="text-align: center">Dr ELN Kiran</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">Entrepreneurship and startup</td>
+          <td style="text-align: center; width: 10%">ES</td>
+          <td style="text-align: center">Dr G Sateeshraj</td>
+        </tr>
+      </table>
+      <br /><br /><br />
+    </div>
+  </body>
+</html>

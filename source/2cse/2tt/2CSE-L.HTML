@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta ne="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Arial, sans-serif;
+        user-select: none;
+        font-weight: bold;
+      }
+      th {
+        color: red;
+      }
+      table {
+        width: 80%;
+        height: 80%;
+        border-collapse: collapse;
+        border: 1px solid black;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+      }
+      th,
+      #day {
+        background-color: #f2f2f2;
+        color: red;
+      }
+      #all {
+        color: red;
+      }
+      @media screen and (max-width: 767px) {
+        table {
+          font-size: 4pt;
+          height: 180px;
+          width: 260px;
+        }
+        span {
+          font-size: 8px;
+        }
+        th,
+        td {
+          padding: 2px;
+        }
+        h1,
+        h3 {
+          font-size: 8pt;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navigation"></div>
+    <div id="timetable">
+      <span style="padding-left: 100px">SECTION:II B.TECH CSE L</span>
+      <table align="center">
+        <tr>
+          <th style="-webkit-text-fill-color: red">Days</th>
+          <th style="-webkit-text-fill-color: red">8:30-9:30</th>
+          <th style="-webkit-text-fill-color: red">9:30-10:30</th>
+          <th style="-webkit-text-fill-color: red">10:30-11:30</th>
+          <th style="-webkit-text-fill-color: red">11:30-12:30</th>
+          <th style="-webkit-text-fill-color: red">12:30-1:30</th>
+          <th style="-webkit-text-fill-color: red">1:30-2:30</th>
+          <th style="-webkit-text-fill-color: red">2:30-3:30</th>
+          <th style="-webkit-text-fill-color: red">3:30-4:30</th>
+          <th style="-webkit-text-fill-color: red">4:30-5:30</th>
+        </tr>
+        <tr>
+          <td style="-webkit-text-fill-color: red">Mon</td>
+          <td>MPCA<br />(1312)</td>
+          <td>P&S<br />(1312)</td>
+          <td colspan="2">DS LAB<br />(MCLAB)</td>
+          <td colspan="1"></td>
+          <td>DMS<br />(1214)</td>
+          <td>DS<br />(1214)</td>
+          <td>HCI<br />(1214)</td>
+          <td colspan="1"></td>
+        </tr>
+        <tr>
+          <td style="-webkit-text-fill-color: red">Tue</td>
+          <td colspan="2">P&SLAB<br />(1214)</td>
+          <td>DMS<br />(1214)</td>
+          <td>DS<br />(1214)</td>
+          <td colspan="1"></td>
+          <td colspan="2">HCI LAB<br />(DE/IT LAB)</td>
+          <td>MPCA<br />(1312)</td>
+          <td colspan="1"></td>
+        </tr>
+        <tr>
+          <td style="-webkit-text-fill-color: red">Wed</td>
+          <td>DS<br />(1312)</td>
+          <td>HCI(<br />1312)</td>
+          <td colspan="1"></td>
+          <td>P&S<br />(1305)</td>
+          <td colspan="1"></td>
+          <td colspan="2">OE()</td>
+          <td colspan="2">NCC()</td>
+        </tr>
+        <tr>
+          <td style="-webkit-text-fill-color: red">Thu</td>
+          <td>HCI<br />(1203)</td>
+          <td colspan="1"></td>
+          <td>DS<br />(1203)</td>
+          <td>P&S<br />(1203)</td>
+          <td colspan="1"></td>
+          <td>MPCA<br />(1315)</td>
+          <td>DMS<br />(1315)</td>
+          <td colspan="2">DSLAB<br />(MC LAB)</td>
+        </tr>
+        <tr>
+          <td style="-webkit-text-fill-color: red">Fri</td>
+          <td colspan="2">MPCA LAB<br />(SRIX-III)</td>
+          <td>DMS<br />(1302)</td>
+          <td>ES<br />(1302)</td>
+          <td colspan="1"></td>
+          <td colspan="2">DSLAB<br />(MC LAB)</td>
+          <td colspan="1"></td>
+          <td colspan="1"></td>
+        </tr>
+      </table>
+    </div>
+
+    <span style="padding-left: 100px">Class coordinator:L.Gunakar</span>
+    <br />
+    <br />
+    <div id="timetable">
+      <table align="center">
+        <tr style="-webkit-text-fill-color: red">
+          <th colspan="4">COURSE NAME</th>
+          <th></th>
+          <th colspan="1">FACULTY NAME</th>
+        </tr>
+        <tr>
+          <td colspan="4">Discrete Matdematical structures</td>
+          <td colspan="1">DMS</td>
+          <td colspan="4">Dr K Rajchander</td>
+        </tr>
+        <tr>
+          <td colspan="4">Probability and statistics</td>
+          <td colspan="1">P&S</td>
+          <td colspan="4">Dr C.Balara Krishna</td>
+        </tr>
+        <tr>
+          <td colspan="4">Probability and statistics lab</td>
+          <td colspan="1">P&S LAB</td>
+          <td colspan="4">Dr C.Balara Krishna</td>
+        </tr>
+        <tr>
+          <td colspan="4">Data Structures</td>
+          <td colspan="1">DS</td>
+          <td colspan="4">Dr J Bhavana</td>
+        </tr>
+        <tr>
+          <td colspan="4">Data Structures lab</td>
+          <td colspan="1">DS LAB</td>
+          <td colspan="4">Dr J Bhavana</td>
+        </tr>
+        <tr>
+          <td colspan="4">Microprocesssor and computer architecture</td>
+          <td colspan="1">MPCA</td>
+          <td colspan="4">G Gunakar</td>
+        </tr>
+        <tr>
+          <td colspan="4">Micro processor and computer architecture lab</td>
+          <td colspan="1">MPCA LAB</td>
+          <td colspan="4">G Gunakar</td>
+        </tr>
+        <tr>
+          <td colspan="4">Human computer interaction</td>
+          <td colspan="1">HCI</td>
+          <td colspan="4">D Veerreddy</td>
+        </tr>
+        <tr>
+          <td colspan="4">Human computer interaction lab</td>
+          <td colspan="1">HCI LAB</td>
+          <td colspan="4">D Veerreddy</td>
+        </tr>
+        <tr>
+          <td colspan="4">Entrepreneurship and startup</td>
+          <td colspan="1">E&S</td>
+          <td colspan="4">Dr N Suman</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
